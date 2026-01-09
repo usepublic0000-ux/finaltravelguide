@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>旅遊手冊 Travel Handbook</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gold: {
+                100: '#FFF9C4',
+                200: '#FFF59D',
+                300: '#FFF176',
+                400: '#FFEE58',
+                500: '#FFD700', // Classic Gold
+                600: '#FDB813',
+                700: '#C58F00', // Dark Gold
+                800: '#8F6800',
+                900: '#5F4500',
+              },
+              dark: {
+                bg: '#0F0F0F',
+                card: '#1A1A1A',
+                surface: '#262626',
+              }
+            },
+            fontFamily: {
+              sans: ['"Noto Sans TC"', 'sans-serif'],
+              serif: ['"Playfair Display"', '"Noto Serif TC"', 'serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #0F0F0F;
+        color: #F3F4F6;
+        -webkit-font-smoothing: antialiased;
+      }
+      /* Custom Scrollbar for luxury feel */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1A1A1A; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333; 
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #C58F00; 
+      }
+      /* Hide scrollbar for clean UI in horizontal lists */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      
+      @media print {
+        @page { margin: 15mm; size: A4; }
+        body { background-color: white !important; color: black !important; }
+        .no-print { display: none !important; }
+        .print-only { display: block !important; }
+        
+        /* Reset colors for print legibility */
+        .text-white, .text-gray-100, .text-gray-200, .text-gray-300, .text-gray-400 { color: #000 !important; }
+        .text-gold-400, .text-gold-500, .text-gold-600 { color: #b48900 !important; } /* Darker gold for white paper */
+        
+        /* Remove dark backgrounds */
+        .bg-dark-bg, .bg-dark-card, .bg-dark-surface, .bg-gradient-to-r, .bg-gradient-to-br {
+          background: white !important;
+          background-image: none !important;
+          border: 1px solid #ddd !important;
+          box-shadow: none !important;
+        }
+        
+        /* Layout adjustments */
+        .min-h-screen { min-height: auto !important; height: auto !important; }
+        .fixed { position: static !important; }
+        .overflow-x-auto { overflow: visible !important; white-space: normal !important; }
+        
+        /* Ensure content doesn't break awkwardly */
+        .break-inside-avoid { page-break-inside: avoid; }
+        .page-break { page-break-before: always; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lz-string": "https://esm.sh/lz-string@1.5.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
