@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { Trip, Tab, DayPlan, Expense, ChecklistItem, ActivityType, ItineraryItem, ExpenseCategory, PaymentMethod, SplitType, Budget, Voucher, BookingDetails, AdvancedGuide } from './types';
-import { fetchDestinationInfo, analyzeItinerary } from './services/geminiService';
+import { fetchDestinationInfo, analyzeItinerary } from './geminiService';
 import { Icons } from './components/Icons';
 import LZString from 'lz-string';
 
