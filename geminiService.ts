@@ -1,4 +1,4 @@
-import { GoogleGenAI, Type } from "@google/genai";
+import { GoogleGenAI, Type } from "@google/generative-ai";
 import { WeatherInfo, EmergencyInfo, TravelTip, AdvancedGuide, Trip } from "../types";
 
 // Helper to initialize AI
@@ -8,7 +8,7 @@ const getAI = () => {
         console.warn("API Key is missing. AI features will be disabled or mocked.");
         return null;
     }
-    return new GoogleGenAI({ apiKey });
+    return new GoogleGenerativeAI(apiKey);
 };
 
 export const fetchDestinationInfo = async (destination: string, month: string, days: number): Promise<{
