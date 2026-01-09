@@ -3,7 +3,7 @@ import { WeatherInfo, EmergencyInfo, TravelTip, AdvancedGuide, Trip } from "../t
 
 // Helper to initialize AI
 const getAI = () => {
-    const apiKey = process.env.API_KEY;
+    const apiKey = import.meta.env.VITE_GOOGLE_API_KEY;
     if (!apiKey) {
         console.warn("API Key is missing. AI features will be disabled or mocked.");
         return null;
